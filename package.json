@@ -1,0 +1,32 @@
+{
+  "name": "ftaskrunner-mysql",
+  "version": "1.0.0",
+  "description": "MySql Fluent tasks for FTaskRunner ",
+  "main": "index.js",
+  "dependencies": {
+    "ftaskrunner":"1.0.0",
+    "async":"2.0.0-rc.3",
+    "mysql":"2.10.2"
+  },
+  "author": "javadparvaresh <javadparvaresh@gmail.com>",
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javadparvaresh/FTaskRunner-MySql.git"
+  },
+  "keywords": [
+    "fluent",
+    "nodejs",
+    "task",
+    "sync",
+    "mysql"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javadparvaresh/FTaskRunner-MySql/issues"
+  },
+  "homepage": "https://github.com/javadparvaresh/FTaskRunner-MySql"
+}
