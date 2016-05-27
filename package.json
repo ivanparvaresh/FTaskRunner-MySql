@@ -1,6 +1,6 @@
 {
   "name": "ftaskrunner-mysql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MySql Fluent tasks for FTaskRunner ",
   "main": "index.js",
   "dependencies": {

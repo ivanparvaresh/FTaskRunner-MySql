@@ -38,10 +38,18 @@ module.exports = function (container) {
                         if (err) {
                             throw err;
                         }
+                        
                         if (rows!=null){
-                            for(var i=0;i<rows.length;i++){
-                                result.push(rows[i]);
+                            
+                            if (typeof rows == 'object'){
+                                result=rows;
+                            }else{
+                                for(var i=0;i<rows.length;i++){
+                                    result.push(rows[i]);
+                                }    
                             }
+                            
+                            
                         }
                         cb();
                     });  
