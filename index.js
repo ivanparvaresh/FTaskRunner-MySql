@@ -18,8 +18,13 @@ module.exports = function (container) {
             
             var connection = mysql.createConnection(scope.config);
             var query=scope.query;
+            var param={};
+            
             if (query==null)
                 query=scope.$$input;
+            else
+                param=scope.$$input;
+            
             
             
             var result=[];
@@ -29,12 +34,14 @@ module.exports = function (container) {
                    cb();
                },
                function(cb){
-                    connection.query(query,function(err,rows,field){
+                    connection.query(query,param,function(err,rows,field){
                         if (err) {
                             throw err;
                         }
-                        for(var i=0;i<rows.length;i++){
-                            result.push(rows[i]);
+                        if (rows!=null){
+                            for(var i=0;i<rows.length;i++){
+                                result.push(rows[i]);
+                            }
                         }
                         cb();
                     });  
